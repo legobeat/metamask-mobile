@@ -276,7 +276,8 @@ const EditGasFee1559Update = ({
   );
 
   const shouldIgnore = useCallback(
-    (option) => ignoreOptions.find((item: string) => item === option),
+    (option) =>
+      ignoreOptions && ignoreOptions.find((item: string) => item === option),
     [ignoreOptions],
   );
 
