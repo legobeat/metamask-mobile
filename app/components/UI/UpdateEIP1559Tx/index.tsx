@@ -238,6 +238,7 @@ const UpdateEIP1559Tx = ({
       analyticsParams={getGasAnalyticsParams()}
       animateOnChange={animateOnGasChange}
       existingGas={existingGas}
+      onlyGas
     />
   );
 };
