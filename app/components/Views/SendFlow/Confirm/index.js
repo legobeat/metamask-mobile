@@ -26,7 +26,6 @@ import {
   getTicker,
   decodeTransferData,
   getNormalizedTxState,
-  parseTransactionEIP1559,
   parseTransactionLegacy,
 } from '../../../../util/transactions';
 import StyledButton from '../../../UI/StyledButton';
@@ -253,14 +252,13 @@ class Confirm extends PureComponent {
     mode: REVIEW,
     gasSelected: AppConstants.GAS_OPTIONS.MEDIUM,
     gasSelectedTemp: AppConstants.GAS_OPTIONS.MEDIUM,
-    EIP1559TransactionData: {},
-    EIP1559TransactionDataTemp: {},
     stopUpdateGas: false,
     advancedGasInserted: false,
     LegacyTransactionData: EMPTY_LEGACY_TRANSACTION_DATA,
     LegacyTransactionDataTemp: {},
     gasSpeedSelected: AppConstants.GAS_OPTIONS.MEDIUM,
     suggestedGasLimit: undefined,
+    gasTransaction: {},
   };
 
   setNetworkNonce = async () => {
@@ -406,33 +404,10 @@ class Confirm extends PureComponent {
         gasEstimateTypeChanged
       ) {
         if (this.props.gasEstimateType === GAS_ESTIMATE_TYPES.FEE_MARKET) {
-          const suggestedGasLimit = fromWei(gas, 'wei');
-
-          const EIP1559TransactionData = this.parseTransactionDataEIP1559({
-            ...this.props.gasFeeEstimates[gasSelected],
-            suggestedGasLimit,
-            selectedOption: gasSelected,
-          });
-
-          let EIP1559TransactionDataTemp;
-          if (gasSelected === gasSelectedTemp) {
-            EIP1559TransactionDataTemp = EIP1559TransactionData;
-          } else {
-            EIP1559TransactionDataTemp = this.parseTransactionDataEIP1559({
-              ...this.props.gasFeeEstimates[gasSelectedTemp],
-              suggestedGasLimit,
-              selectedOption: gasSelectedTemp,
-            });
-          }
-
-          this.setError(EIP1559TransactionData.error);
-
           // eslint-disable-next-line react/no-did-update-set-state
           this.setState(
             {
               gasEstimationReady: true,
-              EIP1559TransactionData,
-              EIP1559TransactionDataTemp,
               LegacyTransactionData: EMPTY_LEGACY_TRANSACTION_DATA,
               LegacyTransactionDataTemp: EMPTY_LEGACY_TRANSACTION_DATA,
               animateOnChange: true,
@@ -474,8 +449,6 @@ class Confirm extends PureComponent {
               gasEstimationReady: true,
               LegacyTransactionData,
               LegacyTransactionDataTemp,
-              EIP1559TransactionData: {},
-              EIP1559TransactionDataTemp: {},
               animateOnChange: true,
               gasSelected,
               gasSelectedTemp,
@@ -615,26 +588,6 @@ class Confirm extends PureComponent {
     });
   };
 
-  parseTransactionDataEIP1559 = (gasFee, options) => {
-    const parsedTransactionEIP1559 = parseTransactionEIP1559(
-      {
-        ...this.props,
-        selectedGasFee: {
-          ...gasFee,
-          estimatedBaseFee: this.props.gasFeeEstimates.estimatedBaseFee,
-        },
-      },
-      options,
-    );
-    const { transaction } = this.props;
-    parsedTransactionEIP1559.error = this.validateAmount({
-      transaction,
-      total: parsedTransactionEIP1559.totalMaxHex,
-    });
-
-    return parsedTransactionEIP1559;
-  };
-
   parseTransactionDataLegacy = (gasFee, options) => {
     const parsedTransactionLegacy = parseTransactionLegacy(
       {
@@ -678,24 +631,21 @@ class Confirm extends PureComponent {
       showCustomNonce,
       gasEstimateType,
     } = this.props;
-    const {
-      fromSelectedAddress,
-      LegacyTransactionData,
-      EIP1559TransactionData,
-    } = this.state;
+    const { fromSelectedAddress, LegacyTransactionData, gasTransaction } =
+      this.state;
     const { nonce } = this.props.transaction;
     const transactionToSend = { ...transaction };
 
     if (gasEstimateType === GAS_ESTIMATE_TYPES.FEE_MARKET) {
-      transactionToSend.gas = EIP1559TransactionData.gasLimitHex;
+      transactionToSend.gas = gasTransaction.gasLimitHex;
       transactionToSend.maxFeePerGas = addHexPrefix(
-        EIP1559TransactionData.suggestedMaxFeePerGasHex,
+        gasTransaction.suggestedMaxFeePerGasHex,
       ); //'0x2540be400'
       transactionToSend.maxPriorityFeePerGas = addHexPrefix(
-        EIP1559TransactionData.suggestedMaxPriorityFeePerGasHex,
+        gasTransaction.suggestedMaxPriorityFeePerGasHex,
       ); //'0x3b9aca00';
       transactionToSend.estimatedBaseFee = addHexPrefix(
-        EIP1559TransactionData.estimatedBaseFeeHex,
+        gasTransaction.estimatedBaseFeeHex,
       );
       delete transactionToSend.gasPrice;
     } else {
@@ -796,11 +746,8 @@ class Confirm extends PureComponent {
       resetTransaction,
       gasEstimateType,
     } = this.props;
-    const {
-      EIP1559TransactionData,
-      LegacyTransactionData,
-      transactionConfirmed,
-    } = this.state;
+    const { LegacyTransactionData, transactionConfirmed, gasTransaction } =
+      this.state;
     if (transactionConfirmed) return;
     this.setState({ transactionConfirmed: true, stopUpdateGas: true });
     try {
@@ -809,7 +756,7 @@ class Confirm extends PureComponent {
       if (gasEstimateType === GAS_ESTIMATE_TYPES.FEE_MARKET) {
         error = this.validateAmount({
           transaction,
-          total: EIP1559TransactionData.totalMaxHex,
+          total: gasTransaction.totalMaxHex,
         });
       } else {
         error = this.validateAmount({
@@ -913,7 +860,6 @@ class Confirm extends PureComponent {
 
   cancelGasEdition = () => {
     this.setState({
-      EIP1559TransactionDataTemp: { ...this.state.EIP1559TransactionData },
       LegacyTransactionDataTemp: { ...this.state.LegacyTransactionData },
       stopUpdateGas: false,
       gasSelectedTemp: this.state.gasSelected,
@@ -921,11 +867,14 @@ class Confirm extends PureComponent {
     this.review();
   };
 
-  saveGasEdition = (gasTxn) => {
-    gasTxn.error = this.validateAmount({
-      transaction: gasTxn,
-      total: gasTxn.totalMaxHex,
+  saveGasEdition = (gasTransaction) => {
+    const { transaction } = this.props;
+    gasTransaction.error = this.validateAmount({
+      transaction,
+      total: gasTransaction.totalMaxHex,
     });
+
+    this.setState({ gasTransaction });
 
     this.review();
   };
@@ -1454,8 +1403,6 @@ const mapStateToProps = (state) => ({
     state.engine.backgroundState.TokenRatesController.contractExchangeRates,
   currentCurrency:
     state.engine.backgroundState.CurrencyRateController.currentCurrency,
-  nativeCurrency:
-    state.engine.backgroundState.CurrencyRateController.nativeCurrency,
   conversionRate:
     state.engine.backgroundState.CurrencyRateController.conversionRate,
   network: state.engine.backgroundState.NetworkController.network,
