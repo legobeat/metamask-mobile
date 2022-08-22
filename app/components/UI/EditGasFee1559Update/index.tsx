@@ -52,7 +52,7 @@ const EditGasFee1559Update = ({
   isAnimating,
   analyticsParams,
   warning,
-  existingGas,
+  currentGasPriceObject,
   onlyGas,
 }: EditGasFee1559UpdateProps) => {
   const [modalInfo, updateModalInfo] = useState({
@@ -67,10 +67,11 @@ const EditGasFee1559Update = ({
   const [showLearnMoreModal, setShowLearnMoreModal] = useState(false);
   const [selectedOption, setSelectedOption] = useState(selectedGasValue);
   const [showInputs, setShowInputs] = useState(!dappSuggestedGas);
-  const [gasData, setGasData] = useState({
-    suggestedMaxFeePerGas: existingGas.maxFeePerGas,
-    suggestedMaxPriorityFeePerGas: existingGas.maxPriorityFeePerGas,
-    suggestedGasLimit: initialSuggestedGasLimit,
+  const [gasPriceObject, setGasData] = useState({
+    suggestedMaxFeePerGas: currentGasPriceObject.suggestedMaxFeePerGas,
+    suggestedMaxPriorityFeePerGas:
+      currentGasPriceObject.suggestedMaxPriorityFeePerGas,
+    gasLimit: initialSuggestedGasLimit,
   });
 
   const [
@@ -83,10 +84,9 @@ const EditGasFee1559Update = ({
 
   const gasTransaction = useGasTransaction({
     onlyGas,
-    gasSelected: selectedOption || null,
+    gasSelected: selectedOption,
     legacy: false,
-    gasLimit: gasData?.suggestedGasLimit || initialSuggestedGasLimit,
-    gasData,
+    gasPriceObject,
   });
 
   const {
@@ -147,19 +147,21 @@ const EditGasFee1559Update = ({
       getAnalyticsParams(),
     );
 
-    const newGasData = {
-      suggestedMaxFeePerGas: gasData?.suggestedMaxFeePerGas,
-      suggestedMaxPriorityFeePerGas: gasData?.suggestedMaxPriorityFeePerGas,
-      suggestedGasLimit: gasData?.suggestedGasLimit,
+    const newGasPriceObject = {
+      suggestedMaxFeePerGas: gasPriceObject?.suggestedMaxFeePerGas,
+      suggestedMaxPriorityFeePerGas:
+        gasPriceObject?.suggestedMaxPriorityFeePerGas,
+      suggestedGasLimit: gasPriceObject?.gasLimit,
     };
-    onSave(gasTransaction, newGasData);
-  }, [getAnalyticsParams, onSave, gasTransaction, gasData]);
+
+    onSave(gasTransaction, newGasPriceObject);
+  }, [getAnalyticsParams, onSave, gasTransaction, gasPriceObject]);
 
   const changeGas = useCallback(
     (gas, option) => {
       setSelectedOption(option);
       setGasData(gas);
-      onChange(gas, option);
+      onChange(option);
     },
     [onChange],
   );
