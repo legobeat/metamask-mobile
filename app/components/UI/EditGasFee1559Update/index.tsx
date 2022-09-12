@@ -54,6 +54,7 @@ const EditGasFee1559Update = ({
   warning,
   currentGasPriceObject,
   onlyGas,
+  swapsParams,
 }: EditGasFee1559UpdateProps) => {
   const [modalInfo, updateModalInfo] = useState({
     isVisible: false,
@@ -86,6 +87,7 @@ const EditGasFee1559Update = ({
     onlyGas,
     gasSelected: selectedOption,
     legacy: false,
+    swapsParams,
     gasPriceObject,
   });
 

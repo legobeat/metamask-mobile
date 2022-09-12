@@ -108,4 +108,5 @@ export interface EditGasFee1559UpdateProps {
     suggestedMaxPriorityFeePerGas: string;
   };
   onlyGas?: boolean;
+  swapsParams?: any;
 }
