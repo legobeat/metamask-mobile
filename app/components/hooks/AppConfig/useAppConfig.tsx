@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react';
 import AppConfig from './AppConfig';
 import { FetchState } from '../../../util/fetch/FetchState';
-import {
-  MM_APP_CONFIG_URL,
-  MM_APP_CONFIG_TEST_URL,
-} from '../../../constants/urls';
+import { MM_APP_CONFIG_TEST_URL } from '../../../constants/urls';
 
 type State = FetchState<AppConfig>;
 const initialState: Readonly<State> = {
