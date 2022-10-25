@@ -3,17 +3,17 @@ import { View, Image } from 'react-native';
 import { createStyles } from './styles';
 import { strings } from '../../../../locales/i18n';
 import Text, {
-  TextVariant,
+  TextVariants,
 } from '../../../component-library/components/Texts/Text';
 import { createNavigationDetails } from '../../../util/navigation/navUtils';
 import Routes from '../../../constants/navigation/Routes';
 import { useTheme } from '../../../util/theme';
 import ReusableModal, { ReusableModalRef } from '../ReusableModal';
 import ButtonTertiary, {
-  ButtonTertiaryVariant,
-} from '../../../component-library/components/Buttons/ButtonTertiary';
-import { ButtonBaseSize } from '../../../component-library/components/Buttons/ButtonBase';
-import ButtonPrimary from '../../../component-library/components/Buttons/ButtonPrimary';
+  ButtonTertiaryVariants,
+} from '../../../component-library/components/Buttons/Button/variants/ButtonTertiary';
+import { ButtonSize } from '../../../component-library/components/Buttons/Button';
+import ButtonPrimary from '../../../component-library/components/Buttons/Button/variants/ButtonPrimary';
 import { useDispatch } from 'react-redux';
 import {
   setAutomaticSecurityChecks,
@@ -59,10 +59,10 @@ const EnableAutomaticSecurityChecksModal = () => {
         <View style={styles.images}>
           <Image source={onboardingDeviceImage} />
         </View>
-        <Text variant={TextVariant.lHeadingLG} style={styles.title}>
+        <Text variant={TextVariants.lHeadingLG} style={styles.title}>
           {strings('enable_automatic_security_check_modal.title')}
         </Text>
-        <Text variant={TextVariant.sBodyMD} style={styles.description}>
+        <Text variant={TextVariants.sBodyMD} style={styles.description}>
           {strings('enable_automatic_security_check_modal.description')}
         </Text>
       </View>
@@ -78,9 +78,9 @@ const EnableAutomaticSecurityChecksModal = () => {
           label={strings(
             'enable_automatic_security_check_modal.secondary_action',
           )}
-          size={ButtonBaseSize.Md}
+          size={ButtonSize.Md}
           onPress={triggerClose}
-          variant={ButtonTertiaryVariant.Normal}
+          buttonTertiaryVariants={ButtonTertiaryVariants.Normal}
         />
       </View>
     </ReusableModal>
