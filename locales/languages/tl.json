@@ -147,7 +147,9 @@
     "wrong_password_error": "Error: Nabigo ang pag-decrypt",
     "wrong_password_error_android": "Error: error:1e000065:Cipher functions:OPENSSL_internal:BAD_DECRYPT",
     "vault_error": "Error: Hindi ma-unlock nang wala ang nakaraang vault.",
-    "clean_vault_error": "Nagkaroon ng error ang MetaMask dahil sa pag-abot sa limitasyon ng storage. Na-corrupt ang lokal na data. Paki-install ulit ang MetaMask at i-restore gamit ang iyong Lihim na Recovery Phrase."
+    "clean_vault_error": "Nagkaroon ng error ang MetaMask dahil sa pag-abot sa limitasyon ng storage. Na-corrupt ang lokal na data. Paki-install ulit ang MetaMask at i-restore gamit ang iyong Lihim na Recovery Phrase.",
+    "security_alert_title": "Panseguridad na Alerto",
+    "security_alert_desc": "Upang magpatuloy, kailangan mong i-on ang Passcode o anumang paraan ng pag-authenticate ng biometrics na sinusuportahan sa iyong device (FaceID, TouchID o Fingerprint)"
   },
   "enter_password": {
     "title": "Ilagay ang iyong password",
@@ -282,6 +284,23 @@
     "no_collectibles": "Hindi makita ang iyong NFT?",
     "no_available_tokens": "Hindi mo ba nakikita ang iyong token?",
     "add_tokens": "MAGDAGDAG NG MGA TOKEN",
+    "tokens_detected_in_account": "{{tokenCount}} (na) bagong {{tokensLabel}} ang natagpuan sa account na ito",
+    "token_toast": {
+      "tokens_imported_title": "Mga Na-import na Token",
+      "tokens_imported_desc": "Matagumpay na na-import ang {{tokenSymbols}}",
+      "token_imported_title": "Na-import na Token",
+      "token_imported_desc": "Matagumpay na na-import ang {{tokenSymbol}}",
+      "tokens_hidden_title": "Itinatago ang mga Token",
+      "tokens_hidden_desc": "Itinatago ang mga nakitang token mula sa iyong wallet",
+      "token_hidden_title": "Itinatago ang mga Token",
+      "token_hidden_desc": "Itinatago ang {{tokenSymbol}}"
+    },
+    "hide_token": {
+      "title": "Itago ang Token?",
+      "desc": "Maaari mong idagdag ulit ang token na ito sa hinaharap sa pamamagitan ng pagpunta sa “Mag-import ng token” at paghahanap sa token.",
+      "cancel_cta": "Kanselahin",
+      "confirm_cta": "Kumpirmahin"
+    },
     "no_tokens": "Wala kang anumang token!",
     "no_nfts_yet": "Wala pang mga NFT",
     "nfts_autodetection_title": "Pagtuklas ng NFT",
@@ -294,14 +313,14 @@
     "deposit_button": "Mag-deposit",
     "copy_address": "Kopyahin",
     "collectible_action_title": "Mga Pagpipiliang Collectible",
+    "remove_token_title": "Gusto mo bang itago ang token na ito?",
     "remove_collectible_title": "Gusto mo bang tanggalin ang collectible na ito?",
     "refresh_metadata": "I-refresh ang Metadata",
     "token_removal_issue_title": "Isyu sa pag-alis ng token.",
     "token_removal_issue_desc": "Nagkaroon ng problema noong sinusubukang alisin ang token. Subukan muli.",
-    "token_removed_title": "Natanggal na ang token!",
-    "token_removed_desc": "Kung magbabago ang iyong isip, puwede mo itong ibalik sa pamamagitan ng pag-tap sa \"+ MAGDAGDAG NG MGA TOKEN\"",
     "collectible_removed_title": "Natanggal na ang collectible!",
     "collectible_removed_desc": "Kung magbabago ang iyong isip, puwede mo itong ibalik sa pamamagitan ng pag-tap sa \"+ MAGDAGDAG NG MGA NFT\"",
+    "remove": "Itago",
     "cancel": "Kanselahin",
     "yes": "Oo",
     "private_key_detected": "Natukoy ang pribadong key",
@@ -310,6 +329,19 @@
     "logout_to_import_seed": "Kailangan mo munang mag-log out para makapag-import ng Lihim na Recovery Phrase.",
     "ready_to_explore": "Handa ka na bang simulang i-explore ang mga blockchain application?",
     "unable_to_load": "Hindi ma-load ang balanse"
+  },
+  "asset_details": {
+    "token": "Token",
+    "amount": "Halaga ng Token",
+    "address": "Address ng kontrata ng token",
+    "decimal": "Decimal ng token",
+    "network": "Network",
+    "lists": "Mga Listahan ng Token",
+    "hide_cta": "Itago ang token",
+    "options": {
+      "view_on_block": "Tingnan sa block explorer",
+      "token_details": "Mga detalye ng token"
+    }
   },
   "activity_view": {
     "title": "Aktibidad"
@@ -330,11 +362,15 @@
       "cancel_add_collectible": "KANSELAHIN",
       "add_collectible": "MAGDAGDAG"
     },
-    "warning_body_description": "Kahit sino ay maaaring gumawa ng token, kabilang ang paggawa ng mga pekeng bersyon ng mga umiiral na token. Matuto pa tungkol sa",
-    "warning_link": "mga scam at panganib sa seguridad.",
-    "security_tips": "Mga Tip sa Seguridad",
-    "token_detection_feature": "Bago! Ang pinahusay na pagtuklas ng token ay magagamit sa Ethereum Mainnet bilang isang pang-eksperimentong tampok.",
-    "token_detection_link": "Paganahin ito mula sa Mga Setting."
+    "banners": {
+      "search_desc": "Ang pinahusay na pagtukoy ng token ay kasalukuyang available sa network ng {{network}}. ",
+      "search_link": "I-enable ito mula sa Mga Setting.",
+      "custom_warning_desc": "Kahit sino ay maaaring gumawa ng token, kabilang ang paggawa ng mga pekeng bersyon ng mga umiiral na token. Matuto pa tungkol sa ",
+      "custom_warning_link": "mga scam at panganib sa seguridad.",
+      "custom_info_desc": "Ang pagtukoy ng token ay hindi pa available sa network na ito. Mangyaring manu-manong mag-import ng token at tiyaking pinagkakatiwalaan mo ito. Matuto tungkol sa ",
+      "custom_info_link": "mga scam sa token at panganib sa seguridad.",
+      "custom_security_tips": "Mga Tip sa Seguridad"
+    }
   },
   "terms_and_conditions": {
     "title": "Mga Tuntunin at Kundisyon",
@@ -360,6 +396,7 @@
   "token": {
     "token_symbol": "Simbolo ng Token",
     "token_address": "Address ng Token",
+    "token_decimal": "Decimal ng Token",
     "search_tokens_placeholder": "Maghanap ng Mga Token",
     "address_cant_be_empty": "Hindi maaaring walang laman ang address ng token.",
     "address_must_be_valid": "Ang address ng token ay dapat na valid na address.",
@@ -407,7 +444,28 @@
     "remove_account_title": "Pagtanggal ng account",
     "remove_account_message": "Gusto mo ba talagang tanggalin ang account na ito?",
     "no": "Hindi",
-    "yes_remove_it": "Oo, tanggalin ito"
+    "yes_remove_it": "Oo, tanggalin ito",
+    "accounts_title": "Accounts",
+    "connect_account_title": "Connect Account",
+    "connect_accounts_title": "Connect Accounts",
+    "connected_accounts_title": "Connected Accounts",
+    "connect_description": "Share your account address, balance, activity, and allow site to initiate transactions.",
+    "connect_multiple_accounts": "Connect multiple accounts",
+    "connect_more_accounts": "Connect more accounts",
+    "cancel": "Cancel",
+    "connect": "Connect",
+    "connect_with_count": "Connect{{countLabel}}",
+    "select_all": "Select all",
+    "permissions": "Permissions",
+    "disconnect": "Disconnect",
+    "disconnect_all_accounts": "Disconnect all accounts"
+  },
+  "toast": {
+    "connected_and_active": "connected and active.",
+    "now_active": "now active.",
+    "revoked": "revoked.",
+    "revoked_all": "All accounts revoked.",
+    "accounts_connected": "accounts connected."
   },
   "connect_qr_hardware": {
     "title": "Ikonekta ang QR-based na hardware wallet",
@@ -438,6 +496,7 @@
     "search_engine": "Search Engine",
     "new_RPC_URL": "Bagong RPC Network",
     "state_logs": "Mga Log ng Estado",
+    "add_network_title": "Magdagdag ng network",
     "auto_lock": "Awtomatikong i-lock",
     "auto_lock_desc": "Piliin kung gaano katagal bago awtomatikong mala-lock ang application.",
     "state_logs_desc": "Makakatulong ito sa MetaMask na ma-debug ang anumang isyung kaharapin mo. Pakipadala ito sa suporta ng MetaMask sa pamamagitan ng icon na hamburger > Magpadala ng Feedback, o mag-reply sa kasalukuyan mong ticket kung mayroon.",
@@ -575,7 +634,34 @@
     "theme_os": "Sistema",
     "theme_light": "Maliwanag",
     "theme_dark": "Madilim",
-    "network_exists": "Naidagdag na ang network na ito."
+    "mainnet": "Mainnet",
+    "test_network_name": "Mga test network",
+    "custom_network_name": "Mga custom na network",
+    "popular": "Sikat",
+    "delete": "I-delete",
+    "network_exists": "Naidagdag na ang network na ito.",
+    "delete_metrics_title": "Tanggalin ang datos ng MetaMetrics",
+    "delete_metrics_description_part_one": "Tatanggalin nito ang salaysay ng datos ng MetaMetrics na nauugnay sa iyong wallet.",
+    "delete_metrics_description_part_two": "Ang datos ng MetaMetrics ay hindi nakikilalang datos ng paggamit at dyagnostiko.",
+    "delete_metrics_description_part_three": "Ang iyong wallet at mga account ay mananatiling eksaktong katulad ng kung ano ang mga ito sa ngayon pagkatapos matanggal ang data na ito. Maaaring tumagal ng hanggang 60 araw ang prosesong ito. Tingnan ang",
+    "delete_metrics_description_part_four": "Sinimulan mo ang aksyong ito noong",
+    "delete_metrics_description_part_five": ". Maaaring tumagal ng hanggang 60 araw ang prosesong ito. Tingnan ang",
+    "consensys_privacy_policy": "Patakaran ng Pagkapribado ng ConsenSys.",
+    "delete_metrics_button": "Tanggalin ang datos ng MetaMetrics",
+    "check_status_button": "Tingnan ang Status",
+    "delete_metrics_confirm_modal_title": "Tanggalin ang datos ng MetaMetrics?",
+    "delete_metrics_confirm_modal_description": "Aalisin na namin ang lahat ng iyong datos ng MetaMetrics. Sigurado ka ba?",
+    "delete_wallet_data_title": "I-delete ang wallet",
+    "delete_wallet_data_description": "Aalisin nito ang lahat ng datos na nauugnay sa wallet mula sa iyong device. Ang iyong mga account ay umiiral sa blockchain at hindi nauugnay sa MetaMask. Maaari mong bawiin anumang oras ang iyong mga account gamit ang iyong Secret Recovery Phrase.",
+    "delete_wallet_data_button": "I-delete ang wallet",
+    "delete_data_status_title": "Status ng Ginawang Pag-delete",
+    "delete_data_status_description": "Ang kasalukuyang status ay",
+    "delete_metrics_error_title": "Hindi namin ma-delete ang data na ito sa ngayon.",
+    "delete_metrics_error_description": "Hindi makumpleto ang kahilingang ito sa ngayon dahil sa isang isyu sa server ng analytics system, pakisubukang muli mamaya.",
+    "ok": "OK",
+    "clear_sdk_connections_title": "Clear all MetaMask SDK Connections",
+    "clear_sdk_connections_text": "All connections will be cleared and dapps will need to request connection again",
+    "sdk_connections": "MetaMask SDK Connections"
   },
   "app_information": {
     "title": "Impormasyon",
@@ -600,9 +686,9 @@
       "Secret Recovery Phrase (SRP)",
       " ay nagbibigay ng ",
       "ganap na access sa iyong wallet, mga pondo at mga account.\n\n",
-      "Ang MetaMask ay isang ",
-      "non-custodial na wallet",
-      ". Ibig sabihin, ",
+      "Ang MetaMask ay isang",
+      "non-custodial na wallet.",
+      "Ibig sabihin,",
       "ikaw ang may ari ng SRP mo."
     ],
     "private_key_explanation": "I-save ito sa isang ligtas at sikretong lugar.",
@@ -628,6 +714,8 @@
     "seed_phrase_copied_time": "(nakaimbak ng 1 minuto)",
     "private_key_copied": "Nakopya ang pribadong key sa clipboard",
     "private_key_copied_time": "(nakaimbak ng 1 minuto)",
+    "private_key_copied_ios": "Ang private key ay pansamantalang kinopya sa clipboard\n",
+    "private_key_copied_android": "Ang private key ay kinopya sa clipboard\n",
     "warning_incorrect_password": "Mali ang password",
     "unknown_error": "Hindi ma-unlock ang iyong account. Pakisubukan ulit.",
     "hardware_error": "Isa itong hardware wallet account, hindi mo ma-export ang iyong pribadong key.",
@@ -659,7 +747,8 @@
     "were_unable": "Hindi namin ma-load ang iyong",
     "balance": "balanse. Basahin ang artikulo ng suporta",
     "troubleshooting_missing": "pag-troubleshoot sa mga nawawalang balanse",
-    "for_help": "para sa tulong."
+    "for_help": "para sa tulong.",
+    "troubleshoot": "I-troubleshoot"
   },
   "account_details": {
     "title": "Mga Detalye ng Account",
@@ -669,6 +758,28 @@
     "account_copied_to_clipboard": "Nakopya ang pampublikong address sa clipboard",
     "share_public_key": "Ibahagi ang aking pampublikong key: "
   },
+  "detected_tokens": {
+    "title": "{{tokenCount}} bagong token ang natagpuan",
+    "title_plural": "{{tokenCount}} (na) bagong token ang natagpuan",
+    "import_cta": "Mag-import ng ({{tokenCount}})",
+    "hide_cta": "Itago Lahat",
+    "token_address": "Address ng token: ",
+    "token_lists": "Mga listahan ng token: {{listNames}}",
+    "token_more": " + {{remainingListCount}} pa",
+    "confirm": {
+      "cancel_cta": "Kanselahin",
+      "confirm_cta": "Kumpirmahin",
+      "import": {
+        "title": "Mag-import ng napiling mga token?",
+        "desc": "Tanging ang mga token na iyong pinili ang lalabas sa iyong wallet. Maaari kang palaging mag-import ng mga nakatagong token sa ibang pagkakataon sa pamamagitan ng paghahanap sa kanila."
+      },
+      "hide": {
+        "title": "Sigurado ka ba?",
+        "desc": "Kapag nagtago ka ng mga token, hindi iyon ipapakita sa iyong wallet. Gayunpaman, maaari mo pa ring idagdag ang mga ito sa pamamagitan ng paghahanap sa kanila."
+      }
+    },
+    "address_copied_to_clipboard": "Nakopya sa clipboard ang address ng token"
+  },
   "qr_scanner": {
     "invalid_qr_code_title": "Hindi valid ang QR Code",
     "invalid_qr_code_message": "Hindi valid ang QR code na sinusubukan mong i-scan.",
@@ -676,10 +787,17 @@
     "allow_camera_dialog_message": "Kailangan namin ang iyong pahintulot na mag-scan ng mga QR code",
     "scanning": "nagsa-scan...",
     "ok": "Ok",
+    "continue": "Magpatuloy",
     "cancel": "Kanselahin",
     "error": "Error",
     "attempting_to_scan_with_wallet_locked": "Mukhang sinusubukan mong mag-scan ng QR code, kailangan mong i-unlock ang iyong wallet para magamit ito.",
-    "attempting_sync_from_wallet_error": "Mukhang sinusubukan mong mag-sync sa extension. Para magawa ito, kakailanganin mong burahin ang iyong kasalukuyang wallet. \n\nSa oras na mgabura o mag-install ka ng bagong bersyon ng app, piliin ang opsyong \"I-sync gamit ang MetaMask Extension\". Mahalaga! Bago burahin ang iyong wallet, tiyaking na-back up mo ang iyong Secret Recovery Phrase."
+    "attempting_sync_from_wallet_error": "Mukhang sinusubukan mong mag-sync sa extension. Para magawa ito, kakailanganin mong burahin ang iyong kasalukuyang wallet. \n\nSa oras na mgabura o mag-install ka ng bagong bersyon ng app, piliin ang opsyong \"I-sync gamit ang MetaMask Extension\". Mahalaga! Bago burahin ang iyong wallet, tiyaking na-back up mo ang iyong Secret Recovery Phrase.",
+    "not_allowed_error_title": "I-enable ang access sa camera",
+    "not_allowed_error_desc": "Kailangan ng access sa camera para mag-scan ng QR code na nauugnay sa isang address ng account o address ng kontrata",
+    "unrecognized_address_qr_code_title": "Hindi nakikilalang QR Code",
+    "unrecognized_address_qr_code_desc": "Paumanhin, ang QR code na ito ay hindi nauugnay sa isang address ng account o isang address ng kontrata.",
+    "url_redirection_alert_title": "Bibisitahin mo ang isang panlabas na link",
+    "url_redirection_alert_desc": "Maaaring gamitin ang mga link upang subukang manlinlang o mag-phish ng mga tao, kaya siguraduhing bisitahin lamang ang mga website na pinagkakatiwalaan mo."
   },
   "action_view": {
     "cancel": "Kanselahin",
@@ -720,9 +838,12 @@
     "insufficient": "Hindi sapat ang pondo",
     "insufficient_amount": "Kailangan mo ng {{amount}} pa {{tokenSymbol}} para makumpleto ang transaksyong ito.",
     "buy_more_eth": "Bumili pa ng ETH",
+    "buy_more": "Bumili pa",
+    "go_to_faucet": "Pumunta sa faucet",
     "get_ether": "Makakuha ng Ether para sa {{networkName}} network.",
     "insufficient_tokens": "Hindi sapat ang {{token}}",
     "invalid_address": "Hindi valid ang address",
+    "invalid_from_address": "Invalid sender address",
     "invalid_amount": "Hindi valid ang halaga",
     "invalid_gas": "Hindi valid ang halaga ng gas",
     "invalid_gas_price": "Hindi valid ang presyo ng gas",
@@ -798,7 +919,8 @@
     "no_camera_permission": "Hindi awtorisado ang kamera. Mangyaring magbigay ng pahintulot at subukang muli",
     "invalid_qr_code_sign": "Di-wastong QR-code. Mangyaring suriin ang iyong hardware at subukang muli.",
     "no_camera_permission_android": "Kailangan mong bigyan ng access ang MetaMask sa iyong kamera upang magpatuloy. Maaaring kailanganin mo ring baguhin ang iyong mga setting ng sistema.",
-    "mismatched_qr_request_id": "Hindi tugmang datos ng transakyon. Mangyaring gamitin ang iyong Keystone para lagdaan ang QR code sa ibaba at i-tap ang 'Kumuha ng Lagda'."
+    "mismatched_qr_request_id": "Hindi tugmang datos ng transakyon. Mangyaring gamitin ang iyong Keystone para lagdaan ang QR code sa ibaba at i-tap ang 'Kumuha ng Lagda'.",
+    "hex_data_copied": "Nakopya ang hex data sa clipboard"
   },
   "custom_gas": {
     "total": "Kabuuan",
@@ -851,7 +973,8 @@
     "close": "Isara",
     "all_set": "Handa na!",
     "all_set_desc": "Matagumpay kang nakapagtakda ng mga pahintulot para sa site na ito.",
-    "must_be_at_least": "Dapat ay hindi bababa sa {{allowance}}"
+    "must_be_at_least": "Dapat ay hindi bababa sa {{allowance}}",
+    "access_up_to": "I-access ang hanggang:"
   },
   "browser": {
     "title": "Browser",
@@ -1027,7 +1150,40 @@
     "other_networks": "Iba Pang Network",
     "close": "Isara",
     "status_ok": "Gumagana ang Lahat ng System",
-    "status_not_ok": "Nagkakaroon ng ilang isyu ang network"
+    "status_not_ok": "Nagkakaroon ng ilang isyu ang network",
+    "want_to_add_network": "Gusto mo bang idagdag ang network na ito?",
+    "network_infomation": "Binibigyang-daan nito ang network na ito na magamit sa loob ng MetaMask",
+    "network_endorsement": "Hindi ineendorso ng MetaMask ang mga custom na network o ang seguridad ng mga ito.",
+    "learn_about": "Alamin ang tungkol sa",
+    "network_risk": "mga scam at panganib sa seguridad ng network",
+    "network_display_name": "Ipinapakitang pangalan",
+    "network_chain_id": "Chain ID",
+    "network_rpc_url": "URL ng Network",
+    "view_details": "Tingnan ang mga detalye",
+    "network_details": "Mga detalye ng network",
+    "network_currency_symbol": "Simbolo ng Currency",
+    "network_block_explorer_url": "URL ng Block Explorer",
+    "search": "Maghanap ng mga dati nang idinagdag na network",
+    "add": "Idagdag",
+    "cancel": "Kanselahin",
+    "approve": "Aprubahan",
+    "malicious_network_warning": "Ang isang malisyosong network provider ay maaaring magsinungaling tungkol sa estado ng blockchain at itala ang iyong aktibidad sa network. Magdagdag lamang ng mga custom na network na pinagkakatiwalaan mo.",
+    "security_link": "https://metamask.zendesk.com/hc/en-us/articles/4404424659995",
+    "network_warning_title": "Impormasyon ng Network",
+    "network_warning_desc": "Ang koneksyon sa network na ito ay umaasa sa mga third party. Ang koneksyon na ito ay maaaring hindi gaanong maaasahan o binibigyang-daan ang mga third-party na subaybayan ang aktibidad.",
+    "learn_more": "Matuto pa",
+    "learn_more_url": "https://metamask.zendesk.com/hc/en-us/articles/4417500466971",
+    "switch_network": "Lumipat sa network",
+    "new_network": "Naidagdag ang bagong network",
+    "network_name": "Ang {{networkName}} Network",
+    "network_added": " ay available na ngayon sa network selector.",
+    "provider": "Ang isang provider ay pinagkakatiwalaang sabihin sa iyong wallet ang mga balanse nito at i-broadcast ang mga transaksyon nito sa matapat na paraan",
+    "no_match": "Walang nakitang katugmang resulta.",
+    "empty_popular_networks": "Idinagdag mo ang lahat ng sikat na network. Maaari kang makatuklas ng higit pang mga network",
+    "add_other_network_here": "dito.",
+    "you_can": "O maaari kang",
+    "add_network": "magdagdag pa ng mga network nang manu-mano.",
+    "deprecated_network_msg": "Dahil sa mga pagbabago ng protokol ng Ethereum: ang mga test network na Rinkeby, Ropsten, at Kovan ay maaaring hindi gumana tulad ng maaasahan at malapit nang itigil ang paggamit."
   },
   "select": {
     "cancel": "Kanselahin",
@@ -1384,7 +1540,9 @@
     "end": "Tapusin",
     "cancel": "Kanselahin",
     "session_ended_title": "Natapos na ang Session",
-    "session_ended_desc": "Tinapos na ang napiling session"
+    "session_ended_desc": "Tinapos na ang napiling session",
+    "session_already_exist": "This session is already connected.",
+    "close_current_session": "Close the current session before starting a new one."
   },
   "paymentRequest": {
     "title": "REQUEST NA PAGBABAYAD",
@@ -1395,9 +1553,8 @@
     "total": "KABUUAN:"
   },
   "webview_error": {
-    "title": "Ooops! Nagkaproblema...",
-    "message": "Hindi namin na-load ang page na iyon.",
-    "reason": "Dahilan",
+    "title": "Nagkaproblema",
+    "message": "Hindi namin ma-load ang page na iyon",
     "return_home": "Bumalik sa home page"
   },
   "offline_mode": {
@@ -1532,9 +1689,9 @@
       "hours": "na oras",
       "business_day": "business day",
       "business_days": "na business day",
-      "lowest_limit": "pinakamababang limitasyon",
-      "medium_limit": "katamtamang limitasyon",
-      "highest_limit": "pinakamataas na limitasyon",
+      "lowest_limit": "pinakamababang limitasyon sa pagbili",
+      "medium_limit": "katamtamang limitasyon sa pagbili",
+      "highest_limit": "pinakamataas na limitasyon sa pagbili",
       "apple_cash_not_supported": "Hindi suportado ang Apple Cash.",
       "card_fees": "Makipag-ugnayan sa iyong card provider para maunawaan ang anumang mga bayarin na maaari nilang singilin sa iyo. Halimbawa, ang mga pagbili gamit ang credit card ay maaaring magpataw ng cash advance fee.",
       "continue_to_amount": "Magpatuloy sa halaga"
@@ -1579,9 +1736,11 @@
     "no_providers_available": "Wala available na mga provider",
     "try_different_amount_to_buy_input": "Subukang pumili ng ibang paraan ng pagbabayad o subukang dagdagan o bawasan ang halagang gusto mong bilhin!",
     "webview_received_error": "Ang WebView ay nakatanggap ng error status code: {{code}}",
-    "no_tokens_available": "There are currently no cryptocurrencies available to purchase on {{network}} in {{region}}",
-    "try_different_region": "Try a different region",
-    "return_home": "Return to Home Screen",
+    "no_tokens_available_title": "Walang Available na Token",
+    "no_tokens_available": "Kasalukuyang walang mga token na available upang bilhin sa {{network}} gamit ang napiling paraan ng pagbabayad.",
+    "change_payment_method": "Baguhin ang paraan ng pagbabayad",
+    "try_different_region": "Subukan ang ibang rehiyon",
+    "return_home": "Bumalik sa Home Screen",
     "region": {
       "buy_crypto_tokens": "Bumili ng mga Crypto Token",
       "title": "Piliin ang iyong Rehiyon",
@@ -1598,33 +1757,35 @@
       "unsupported_link": "Bisitahin ang Artikulo ng Suporta"
     },
     "order_details": {
-      "details_main": "Order Details",
-      "successful": "Order Successful!",
-      "your": "Your",
-      "available_in_account": "is now available in your account",
+      "details_main": "Mga Detalye ng Order",
+      "successful": "Matagumpay ang Order!",
+      "your": "Ang iyong",
+      "available_in_account": "ay available na sa account mo",
       "crypto": "crypto",
-      "failed": "Order Failed",
-      "failed_description": "Something went wrong, and {{provider}} was unable to complete your order. Please try again or with another provider.",
-      "the_provider": "the provider",
-      "processing": "Processing Order",
-      "processing_card_description": "Credit/Debit purchases typically take a few minutes",
-      "processing_bank_description": "Bank transfers typically take a few business days",
-      "details": "Order details",
-      "via": "via",
-      "purchase_amount": "Purchase Amount Total",
-      "etherscan": "View full details on",
-      "another_purchase": "Make another purchase",
-      "questions": "Questions?",
-      "contact": "Contact",
-      "support": "Support",
+      "failed": "Nabigo ang Order",
+      "cancelled": "Kinansela ang Order",
+      "failed_description": "Nagkaproblema, at hindi nakumpleto ng {{provider}} ang iyong order. Pakisubukan ulit o subukan gamit ang ibang provider.",
+      "the_provider": "ang provider",
+      "processing": "Pinoproseso ang Order",
+      "processing_card_description": "Karaniwang tumatagal ng ilang minuto ang mga pagbili gamit ang Credit/Debit card",
+      "processing_bank_description": "Ang mga bank transfer ay karaniwang tumatagal ng ilang araw ng negosyo",
+      "details": "Mga detalye ng order",
+      "via": "sa pamamagitan ng",
+      "purchase_amount": "Kabuuang Halaga ng Binili",
+      "etherscan": "Tingnan ang buong detalye sa",
+      "another_purchase": "Muling bumili",
+      "questions": "May mga katanungan?",
+      "contact_support": "Makipag-ugnayan sa suporta",
+      "support": "Suporta",
+      "view_order_status": "Tingnan ang status ng order sa {{provider}}",
       "id": "Order ID",
-      "date_and_time": "Date and Time",
-      "payment_method": "Payment Method",
-      "token_amount": "Token Amount",
-      "exchange_rate": "Exchange Rate",
-      "total_fees": "Total Fees",
-      "amount": "Amount",
-      "a_block_explorer": "a block explorer"
+      "date_and_time": "Petsa at Oras",
+      "payment_method": "Paraan ng Pagbabayad",
+      "token_amount": "Halaga ng Token",
+      "exchange_rate": "Halaga ng Palitan",
+      "total_fees": "Kabuuang Bayarin",
+      "amount": "Halaga",
+      "a_block_explorer": "isang block explorer"
     }
   },
   "swaps": {
@@ -1734,7 +1895,8 @@
       "best_price": "pinakasulit na presyo",
       "from_the": "mula kay/sa",
       "top_liquidity": "mga nangungunang pinagkunan ng liquidity palagi.",
-      "fee_is_applied": "Ang bayarin na {{fee}} ay awtomatikong fina-factor sa bawat quote, na sumusuporta sa kasalukuyang development para mas mapahusay ang MetaMask."
+      "fee_is_applied": "Ang bayarin na {{fee}} ay awtomatikong fina-factor sa bawat quote, na sumusuporta sa kasalukuyang development para mas mapahusay ang MetaMask.",
+      "fee_is_not_applied": "Hindi nagsasama ang MetaMask ng karagdagang singil sa quote na ito."
     },
     "enable": {
       "this_will": "Magagawa nitong",
@@ -1836,6 +1998,17 @@
     "copied_clipboard": "Nakopya sa clipboard",
     "ok": "OK"
   },
+  "whats_new": {
+    "title": "Tingnan kung ano'ng bago",
+    "feature_token_detection_title": "Narito ang pinahusay na pagtukoy ng token",
+    "feature_token_detection_description": "Ang pinahusay na pagtukoy ng token ay kasalukuyang available sa network ng Ethereum Mainnet, Polygon, BSC, at Avalanche. Marami pang darating!\n\nKumukuha kami ng mga token mula sa mga listahan ng mga token ng 3rd party. Ang mga token na nakalista sa higit sa dalawang listahan ng token ay awtomatikong matutukoy.\n\nNAKA-ON bilang default ang feature sa pagtukoy ng token. Ngunit maaari mo itong i-disable mula sa Mga Setting.",
+    "feature_token_detection_button_text": "Bisitahin sa Mga Setting",
+    "feature_token_security_title_1": "Scam at mga panganib sa seguridad",
+    "feature_token_security_description_1": "Ang mga token ay maaaring likhain ng sinuman at maaaring magkaroon ng mga kaparehong pangalan. Kung makakita ka ng isang token na lumalabas na hindi mo pinagkakatiwalaan o hindi ka pa nagkaroon ng interaksyon - mas ligtas na hindi pagkatiwalaan ito.",
+    "feature_token_security_title_2": "Pindutin nang matagal para itago ang mga token",
+    "feature_token_security_description_2": "Sa MetaMask mobile app, maaari mong palaging itago ang mga token sa pamamagitan ng matagal na pagpindot sa token, at piliin ang ‘Itago’.",
+    "feature_token_security_button_text": "Magsimula na tayo!"
+  },
   "invalid_network": {
     "title": "Kailangang ilagay ulit ang chain ID para sa custom na network na \n %{network} \n.",
     "message": "Para maprotektahan ka sa mga nakakahamak o palyadong network provider, kinakailangan na ngayon ang mga chain ID para sa lahat ng custom na network.",
@@ -1886,12 +2059,12 @@
     "learn_more": {
       "title": "Paano ako dapat pumili?",
       "intro": "Ang pagpili ng tamang bayad sa gas ay depende sa uri ng transaksyon at kung gaano ito kahalaga sa iyo.",
-      "high_label": "Mataas",
-      "high_text": "Pinakamainam ito para sa mga transaksyong sensitibo sa oras (tulad ng mga Pagpapalit) dahil pinapataas nito ang posibilidad ng isang matagumpay na transaksyon. Kung ang isang Pagpapalit ay masyadong tumatagal upang maproseso ito ay maaaring mabigo at magresulta sa pagkawala ng ilan sa iyong bayad sa gas.",
-      "medium_label": "Medium",
-      "medium_text": "Ang medium na bayad sa gas ay mainam para sa pagpapadala, pag-withdraw o iba pang hindi sensitibo sa oras na mga transaksyon. Ang setting na ito ay kadalasang magreresulta sa isang matagumpay na transaksyon.",
+      "aggressive_label": "Aggresive",
+      "aggressive_text": "Mataas na posibilidad, kahit na sa pabagu-bagong merkado. Gamitin ang Aggresive upang masaklaw ang mga pagtaas ng trapiko sa network dahil sa mga bagay tulad ng mga sikat na pagbagsak ng NFT.",
+      "market_label": "Market",
+      "market_text": "Gamitin ang Market para sa mabilis na pagproseso sa kasalukuyang presyo sa merkado.",
       "low_label": "Mababa",
-      "low_text": "Ang mababang bayad sa gas ay dapat lamang gamitin para sa mga hindi mahalagang transaksyon o kapag ang trapiko sa network ay napakababa. Sa mas mababang bayad, mahirap hulaan kung kailan (o kung) magiging matagumpay ang iyong transaksyon.",
+      "low_text": "Gamitin ang Mababa para maghintay ng mas murang presyo. Ang mga pagtatantya sa oras ay hindi gaanong tumpak dahil ang mga presyo ay medyo hindi mahuhulaan.",
       "link": "Matuto pa tungkol sa pag-customize ng gas."
     },
     "save": "I-save",
@@ -1912,6 +2085,9 @@
     "low": "Mababa",
     "medium": "Medium",
     "high": "Mataas",
+    "market": "Market",
+    "aggressive": "Aggressive",
+    "low_fee_warning": "Tandaan ang iyong oras ng pagproseso. Ang mga transaksyon sa hinaharap ay nakapila pagkatapos nito.",
     "edit_priority": "I-edit ang priyoridad",
     "speed_up_transaction": "Pabilisin ang transaksyon",
     "cancel_transaction": "Kanselahin ang transaksyon",
@@ -1997,6 +2173,10 @@
     "token_detection_mainnet_link": "Maaari ka ring magdagdag ng mga token ng manu-mano.",
     "or": "o"
   },
+  "download_files": {
+    "error": "Nabigong i-download ang attachment.",
+    "unknownError": "May naganap na di nakikilalang error"
+  },
   "remember_me": {
     "enable_remember_me": "I-on ang Tandaan ako",
     "enable_remember_me_description": "Kapag naka-on ang tandaan ako, sinumang may access sa iyong telepono ay makaka-access sa iyong MetaMask account."
@@ -2006,5 +2186,97 @@
     "placeholder": "Password",
     "description": "Kung in-off mo ang opsyong ito, kakailanganin mo ang iyong password upang i-unlock ang MetaMask mula ngayon.",
     "action": "I-off ang Tandaan ako"
+  },
+  "dapp_connect": {
+    "warning": "Para magamit ang feature na ito, paki-update ang app sa pinakabagong bersyon"
+  },
+  "confirmation_modal": {
+    "cancel_cta": "Kanselahin",
+    "confirm_cta": "Kumpirmahin"
+  },
+  "automatic_security_checks": {
+    "title": "Mga awtomatikong pagsusuri sa seguridad",
+    "description": "Ang awtomatikong pagtingin ng mga update ay maaaring ilantad ang iyong IP address sa mga GitHub server. Ipinapahiwatig lang nito na ginagamit ng iyong IP address ang MetaMask. Walang ibang impormasyon o mga address ng account ang nalalantad."
+  },
+  "terms_of_use": {
+    "introduction": "IMPORTANT NOTICE: THIS AGREEMENT IS SUBJECT TO BINDING ARBITRATION AND A WAIVER OF CLASS ACTION RIGHTS AS DETAILED IN SECTION 11. PLEASE READ THE AGREEMENT CAREFULLY.\n\n ConsenSys Software Inc. (“ConsenSys,” “we,” “us,” or “our”) is the leading blockchain software development company. With a focus on utilizing decentralized technologies, such as Ethereum, our software is powering a revolution in commerce and finance and helping to optimize business processes. ConsenSys hosts a top level domain website, www.consensys.net, that serves information regarding ConsenSys and our Offerings, as defined below, as well as sub-domains for our products or services (the top level domain with the sub-domains collectively referred to as the “Site”), which include text, images, audio, code and other materials or third party information.\n\n These Terms of Use (the “Terms,” “Terms of Use” or “Agreement”) contain the terms and conditions that govern your access to and use of the Site and Offerings provided by us and is an agreement between us and you or the entity you represent (“you” or “your”). Please read these Terms of Use carefully before using the Site or Offerings. By using the Site, clicking a button or checkbox to accept or agree to these Terms where that option is made available, clicking a button to use or access any of the Offerings, completing an Order, or,  if earlier, using or otherwise accessing the Offerings (the date on which any of the events listed above occur being the “Effective Date”), you (1) accept and agree to these Terms and any additional terms, rules and conditions of participation issued by ConsenSys from time to time and (2) consent to the collection, use, disclosure and other handling of information as described in our Privacy Policy. If you do not agree to the Terms or perform any and all obligations you accept under the Terms, then you may not access or use the Offerings.\n\n You represent to us that you are lawfully able to enter into contracts. If you are entering into this Agreement for an entity, such as the company you work for, you represent to us that you have legal authority to bind that entity. Please see Section 13 for definitions of certain capitalized terms used in this Agreement.\n\n In addition, you represent to us that you and your financial institutions, or any party that owns or controls you or your financial institutions, are (1) not subject to sanctions or otherwise designated on any list of prohibited or restricted parties, including but not limited to the lists maintained by the United Nations Security Council, the U.S. Government (i.e., the Specially Designated Nationals List and Foreign Sanctions Evaders List of the U.S. Department of Treasury and the Entity List of the U.S. Department of Commerce), the European Union or its Member States, or other applicable government authority and (2) not located in any country subject to a comprehensive sanctions program implemented by the United States.",
+    "section_1": "1. The Offerings.",
+    "section_1.1": "1.1 Generally. You may access and use the Offerings in accordance with this Agreement. You agree to comply with the terms of this Agreement and all laws, rules and regulations applicable to your use of the Offerings.",
+    "section_1.2": "1.2 Offerings and Access. ConsenSys offers a number of products and services, each an “Offering”, under the ConsenSys brand or brands owned by us. These include Codefi, Quorum, Infura, MetaMask and others. Offerings are generally accessed through the Site or through a third party provider of which we approved, such as the Google Play or Apple App Store, unless otherwise agreed in writing. Some Offerings may require you to create an account, enter a valid form of payment, and select a paid plan (a “Paid Plan”), or initiate an Order.",
+    "section_1.3": "1.3 Third-Party Content. In certain Offerings, Third-Party Content may be used by you at your election. Third-Party Content is governed by this Agreement and, if applicable, separate terms and conditions accompanying such Third-Party Content, which terms and conditions may include separate fees and charges.",
+    "section_1.4": "1.4 Third-Party Offerings. When you use our Offerings, you may also be using the products or services of one or more third parties. Your use of these third party offerings may be subject to the separate policies, terms of use, and fees of these third parties.",
+    "section_2": "2. Changes.",
+    "section_2_1": "2.1 To the Offerings. We may change or discontinue any or all of the Offerings or change or remove functionality of any or all of the Offerings from time to time. We will use commercially reasonable efforts to communicate to you any material change or discontinuation of an Offering through the Site or public communication channels.  If you are on a Paid Plan, we will use commercially reasonable efforts to communicate to you  any material changes to or discontinuation of the Offering at least 30 days in advance of such change, and we will use commercially reasonable efforts to continue supporting the previous version of the Offering for up to three months after the change or discontinuation, except if doing so (a) would pose an information security or intellectual property issue, (b) is economically or technically burdensome, or (c) would create undue risk of us violating the law.",
+    "section_2_2": "2.2 To this Agreement. We reserve the right, at our sole discretion, to modify or replace any part of this Agreement or any Policies at any time. It is your responsibility to check this Agreement periodically for changes, but we will also use commercially reasonable efforts to communicate any material changes to this Agreement through the Site or other public channels. Your continued use of or access to the Offerings following the posting of any changes to this Agreement constitutes acceptance of those changes.",
+    "section_3": "3. Your Responsibilities.",
+    "section_3_1": "3.1 Your Accounts.  For those Offerings that require an account, and except to the extent caused by our breach of this Agreement, (a) you are responsible for all activities that occur under your account, regardless of whether the activities are authorized by you or undertaken by you, your employees or a third party (including your contractors, agents or other End Users), and (b) we and our affiliates are not responsible for unauthorized access to your account, including any access that occurred as a result of fraud, phishing, or other criminal activity perpetrated by third parties.",
+    "section_3_2": "3.2 Your Use. You are responsible for all activities that occur through your use of those Offerings that do not require an account, except to the extent caused by our breach of this Agreement, regardless of whether the activities are authorized by you or undertaken by you, your employees or a third party (including your contractors, agents or other End Users).  We and our affiliates are not responsible for unauthorized access that may occur during your use of the Offerings, including any access that occurred as a result of fraud, phishing, or other criminal activity perpetrated by third parties.  You will ensure that your use of the Offerings does not violate any applicable law.",
+    "section_3_3": "3.3 Your Security and Backup. You are solely responsible for properly configuring and using the Offerings and otherwise taking appropriate action to secure, protect and backup your accounts and/or Your Content in a manner that will provide appropriate security and protection, which might include use of encryption.  This includes your obligation under this Agreement to record and securely maintain any passwords or backup security phrases (i.e. “seed” phrases) that relate to your use of the Offerings. You acknowledge that you will not share with us nor any other third party any password or backup/seed phrase that relates to your use of the Offerings, and that we will not be held responsible if you do share any such phrase or password.",
+    "section_3_4": "3.4 Log-In Credentials and API Authentication. To the extent we provide you with log-in credentials and API authentication generated by the Offerings, such log-in credentials and API authentication are for your use only and you will not sell, transfer or sublicense them to any other entity or person, except that you may disclose your password or private key to your agents and subcontractors performing work on your behalf.",
+    "section_3_5": "3.5 Applicability to MetaMask Offerings. For the avoidance of doubt, the terms of this Section 3 are applicable to all Offerings, including MetaMask and any accounts you create through MetaMask with Third Party Offerings, such as decentralized applications, or blockchain-based accounts themselves.",
+    "section_4": "4. Fees and Payment.",
+    "section_4_1": "4.1 Publicly Available Offerings. Some Offerings may be offered to the public and licensed on a royalty free basis, including Offerings that require a Paid Plan for software licensing fees above a certain threshold of use.",
+    "section_4_2": "4.2 Offering Fees.  If your use of an Offering does not require an Order or Paid Plan but software licensing fees are charged contemporaneously with your use of the Offering, those fees will be charged as described on the Site or in the user interface of the Offering.  Such fees may be calculated by combining a fee charged by us and a fee charged by a Third Party Offering that provides certain functionality related to the Offering.  For those Offerings which entail an Order or Paid Plan, we calculate and bill fees and charges according to your Order or Paid Plan. For such Offerings, on the first day of each billing period, you will pay us the applicable fees (the “Base Fees”) and any applicable taxes based on the Offerings in the Paid Plan. In addition, we may, for particular Orders, issue an invoice to you for all charges above the applicable threshold for your Paid Plan which constitute overage fees for the previous billing period. If you make any other changes to the Offerings during a billing period (e.g. upgrading or downgrading your Paid Plan), we will apply any additional charges or credits to the next billing period. We may bill you more frequently for fees accrued at our discretion upon notice to you.  You will pay all fees in U.S. dollars unless the particular Offering specifies a different form of payment or otherwise agreed to in writing. All amounts payable by you under this Agreement will be paid to us without setoff or counterclaim, and without any deduction or withholding. Fees and charges for any new Offering or new feature of an Offering will be effective when we use commercially reasonable efforts to communicate updated fees and charges through our Site or other public channels or, if you are on a Paid Plan, upon commercially reasonable efforts to notify you, unless we expressly state otherwise in a notice. We may increase or add new fees and charges for any existing Offerings you are using by using commercially reasonable efforts to notify users of the Offerings through our Site or other public channels or, if you are on a Paid Plan, by giving you at least 30 days’ prior notice.  Unless otherwise specified in an Order, if you are on a Paid Plan, all amounts due under this Agreement are payable within thirty (30) days following receipt of your invoice.  We may elect to charge you interest at the rate of 1.5% per month (or the highest rate permitted by law, if less) on all late payments.",
+    "section_4_3": "4.3 Taxes. Each party will be responsible, as required under applicable law, for identifying and paying all taxes and other governmental fees and charges (and any penalties, interest, and other additions thereto) that are imposed on that party upon or with respect to the transactions and payments under this Agreement. All fees payable by you are exclusive taxes unless otherwise noted. We reserve the right to withhold taxes where required.",
+    "section_5": "5. Temporary Suspension; Limiting API Requests.",
+    "section_5_1": "5.1 Generally. We may suspend your right to access or use any portion or all of the Offerings immediately if we determine:\n\n(a) your use of the Offerings (i) poses a security risk to the Offerings or any third party, (ii) could adversely impact our systems, the Offerings or the systems of any other user, (iii) could subject us, our affiliates, or any third party to liability, or (iv) could be unlawful;\n\n(b) you are, or any End User is, in breach of this Agreement;\n\n(c) you are in breach of your payment obligations under Section 4 and such breach continues for 30 days or longer; or\n\n(d) for entities, you have ceased to operate in the ordinary course, made an assignment for the benefit of creditors or similar disposition of your assets, or become the subject of any bankruptcy, reorganization, liquidation, dissolution or similar proceeding.",
+    "section_5_2": "5.2 Effect of Suspension. If we suspend your right to access or use any portion or all of the Offerings:\n\n(a) you remain responsible for all fees and charges you incur during the period of suspension; and\n\n(b) you will not be entitled to any fee credits for any period of suspension.",
+    "section_5_3": "5.3 Limiting API Requests. If applicable to a particular Offering, we retain sole discretion to limit your usage of the Offerings (including without limitation by limiting the number of API requests you may submit (“API Requests”)) at any time if your usage of the Offerings exceeds the usage threshold specified in your Paid Plan.",
+    "section_6": "6. Term; Termination.",
+    "section_6_1": "6.1 Term. For Offerings subject to a Paid Plan, the term of this Agreement will commence on the Effective Date and will remain in effect until terminated under this Section 6. Any notice of termination of this Agreement by either party to the other must include a Termination Date that complies with the notice periods in Section 6.2.  For Offerings that are not subject to a Paid Plan, the term of this Agreement will commence on the Effective Date and will remain in effect until you stop accessing or using the Offerings.",
+    "section_6_2": "6.2 Termination.\n\n(a) Termination for Convenience. If you are not on a Paid Plan, you may terminate this Agreement for any reason by ceasing use of the Offering. If you are on a Paid Plan, each party may terminate this Agreement for any reason by giving the other party at least 30 days’ written notice, subject to the provisions in Section 6.2(b).\n\n(b) Termination for Cause.\n\n(i) By Either Party. Either party may terminate this Agreement for cause if the other party is in material breach of this Agreement and the material breach remains uncured for a period of 30 days from receipt of notice by the other party.\n\n(ii) By Us. We may also terminate this Agreement immediately (A) for cause if we have the right to suspend under Section 5, (B) if our relationship with a third-party partner who provides software or other technology we use to provide the Offerings expires, terminates or requires us to change the way we provide the software or other technology as part of the Offerings, or (C) in order to avoid undue risk of violating the law.",
+    "section_6_3": "6.3 Effect of Termination. Upon the Termination Date:\n\n(i) all your rights under this Agreement immediately terminate; and\n\n(ii) each party remains responsible for all fees and charges it has incurred through the Termination Date and are responsible for any fees and charges it incurs during the post-termination period;\n\n(iii) the terms and conditions of this Agreement shall survive the expiration or termination of this Agreement to the full extent necessary for their enforcement and for the protection of the party in whose favor they operate.  For instance, despite this Agreement between you and us terminating, any dispute raised after you stop accessing or using the Offerings will be subject to the applicable provisions of this Agreement if that dispute relates to your prior access or use.\n\nFor any use of the Offerings after the Termination Date, the terms of this Agreement will again apply and, if your use is under a Paid Plan, you will pay the applicable fees at the rates under Section 4.",
+    "section_7": "7. Proprietary Rights.",
+    "section_7_1": "7.1 Your Content. Depending on the Offering, you may share Content with us. Except as provided in this Section 7, we obtain no rights under this Agreement from you (or your licensors) to Your Content. You consent to our use of Your Content to provide the Offerings to you.",
+    "section_7_2": "7.2 Offerings License. We or our licensors own all right, title, and interest in and to the Offerings, and all related technology and intellectual property rights. Subject to the terms of this Agreement, we grant you a limited, revocable, non-exclusive, non-sublicensable, non-transferable license to do the following: (a) access and use the Offerings solely in accordance with this Agreement; and (b) copy and use Our Content solely in connection with your permitted use of the Offerings. Except as provided in this Section 7.2, you obtain no rights under this Agreement from us, our affiliates or our licensors to the Offerings, including any related intellectual property rights. Some of Our Content and Third-Party Content may be provided to you under a separate license, such as the Apache License, Version 2.0, or other open source license. In the event of a conflict between this Agreement and any separate license, the separate license will prevail with respect to Our Content or Third-Party Content that is the subject of such separate license.",
+    "section_7_3": "7.3 License Restrictions. Neither you nor any End User will use the Offerings in any manner or for any purpose other than as expressly permitted by this Agreement. Except for as authorized, neither you nor any End User will, or will attempt to (a) modify, distribute, alter, tamper with, repair, or otherwise create derivative works of any Content included in the Offerings (except to the extent Content included in the Offerings is provided to you under a separate license that expressly permits the creation of derivative works), (b) reverse engineer, disassemble, or decompile the Offerings or apply any other process or procedure to derive the source code of any software included in the Offerings (except to the extent applicable law doesn’t allow this restriction), (c) access or use the Offerings in a way intended to avoid incurring fees or exceeding usage limits or quotas, (d) use scraping techniques to mine or otherwise scrape data except as permitted by a Plan, or (e) resell or sublicense the Offerings unless otherwise agreed in writing. You will not use Our Marks unless you obtain our prior written consent. You will not misrepresent or embellish the relationship between us and you (including by expressing or implying that we support, sponsor, endorse, or contribute to you or your business endeavors). You will not imply any relationship or affiliation between us and you except as expressly permitted by this Agreement.",
+    "section_7_4": "7.4 Suggestions. If you provide any Suggestions to us or our affiliates, we and our affiliates will be entitled to use the Suggestions without restriction. You hereby irrevocably assign to us all right, title, and interest in and to the Suggestions and agree to provide us any assistance we require to document, perfect, and maintain our rights in the Suggestions.",
+    "section_7_5": "7.5 U.S. Government Users. If you are a U.S. Government End User, we are licensing the Offerings to you as a “Commercial Item” as that term is defined in the U.S. Code of Federal Regulations (see 48 C.F.R. § 2.101), and the rights we grant you to the Offerings are the same as the rights we grant to all others under these Terms of Use.",
+    "section_8": "8. Indemnification.",
+    "section_8_1": "8.1 General.\n\n(a) You will defend, indemnify, and hold harmless us, our affiliates and licensors, and each of their respective employees, officers, directors, and representatives from and against any Losses arising out of or relating to any claim concerning: (a) breach of this Agreement or violation of applicable law by you; and (b) a dispute between you and any of your customers or users. You will reimburse us for reasonable attorneys’ fees and expenses, associated with claims described in (a) and (b) above.\n\n(b) We will defend, indemnify, and hold harmless you and your employees, officers, directors, and representatives from and against any Losses arising out of or relating to any claim concerning our material and intentional breach of this Agreement.  We will reimburse you for reasonable attorneys’ fees and expenses associated with the claims described in this paragraph.",
+    "section_8_2": "8.2 Intellectual Property.\n\n(a) Subject to the limitations in this Section 8, you will defend ConsenSys, its affiliates, and their respective employees, officers, and directors against any third-party claim alleging that any of Your Content infringes or misappropriates that third party’s intellectual property rights, and will pay the amount of any adverse final judgment or settlement.\n\n(b) Subject to the limitations in this Section 8 and the limitations in Section 10, we will defend you and your employees, officers, and directors against any third-party claim alleging that the Offerings infringe or misappropriate that third party’s intellectual property rights, and will pay the amount of any adverse final judgment or settlement.  However, we will not be required to spend more than $200,000 pursuant to this Section 8, including without limitation attorneys’ fees, court costs, settlements, judgments, and reimbursement costs.\n\n(c) Neither party will have obligations or liability under this Section 8.2 arising from infringement by you combining the Offerings with any other product, service, software, data, content or method. In addition, we will have no obligations or liability arising from your use of the Offerings after we have notified you to discontinue such use. The remedies provided in this Section 8.2 are the sole and exclusive remedies for any third-party claims of infringement or misappropriation of intellectual property rights by the Offerings or by Your Content.",
+    "section_8_3": "8.3 Process. In no event will a party agree to any settlement of any claim that involves any commitment, other than the payment of money, without the written consent of the other party.",
+    "section_9": "9. Disclaimers; Risk.",
+    "section_9_1": "9.1 DISCLAIMER. THE OFFERINGS ARE PROVIDED “AS IS.” EXCEPT TO THE EXTENT PROHIBITED BY LAW, OR TO THE EXTENT ANY STATUTORY RIGHTS APPLY THAT CANNOT BE EXCLUDED, LIMITED OR WAIVED, WE AND OUR AFFILIATES AND LICENSORS (A) MAKE NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY OR OTHERWISE REGARDING THE OFFERINGS OR THE THIRD-PARTY CONTENT, AND (B) DISCLAIM ALL WARRANTIES, INCLUDING ANY IMPLIED OR EXPRESS WARRANTIES (I) OF MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR QUIET ENJOYMENT, (II) ARISING OUT OF ANY COURSE OF DEALING OR USAGE OF TRADE, (III) THAT THE OFFERINGS OR THIRD-PARTY CONTENT WILL BE UNINTERRUPTED, ERROR FREE OR FREE OF HARMFUL COMPONENTS, AND (IV) THAT ANY CONTENT WILL BE SECURE OR NOT OTHERWISE LOST OR ALTERED.",
+    "section_9_2": "9.2 RISKS. OUR OFFERINGS RELY ON EMERGING TECHNOLOGIES, SUCH AS ETHEREUM. SOME OFFERINGS ARE SUBJECT TO INCREASED RISK THROUGH YOUR POTENTIAL MISUSE OF THINGS SUCH AS PUBLIC/PRIVATE KEY CRYPTOGRAPHY, OR FAILING TO PROPERLY UPDATE OR RUN SOFTWARE TO ACCOMMODATE PROTOCOL UPGRADES, LIKE THE TRANSITION TO PROOF OF STAKE CONSENSUS. BY USING THE OFFERINGS YOU EXPLICITLY ACKNOWLEDGE AND ACCEPT THESE HEIGHTENED RISKS.  YOU REPRESENT THAT YOU ARE FINANCIALLY AND TECHNICALLY SOPHISTICATED ENOUGH TO UNDERSTAND THE INHERENT RISKS ASSOCIATED WITH USING CRYPTOGRAPHIC AND BLOCKCHAIN-BASED SYSTEMS AND UPGRADING YOUR SOFTWARE AND PROCESSES TO ACCOMMODATE PROTOCOL UPGRADES, AND THAT YOU HAVE A WORKING KNOWLEDGE OF THE USAGE AND INTRICACIES OF DIGITAL ASSETS SUCH AS ETHER (ETH) AND OTHER DIGITAL TOKENS, SUCH AS THOSE FOLLOWING THE ERC-20 TOKEN STANDARD.  IN PARTICULAR, YOU UNDERSTAND THAT WE DO NOT OPERATE THE ETHEREUM PROTOCOL OR ANY OTHER BLOCKCHAIN PROTOCOL, COMMUNICATE OR EXECUTE PROTOCOL UPGRADES, OR APPROVE OR PROCESS BLOCKCHAIN TRANSACTIONS ON BEHALF OF YOU.  YOU FURTHER UNDERSTAND THAT BLOCKCHAIN PROTOCOLS PRESENT THEIR OWN RISKS OF USE, THAT SUPPORTING OR PARTICIPATING IN THE PROTOCOL MAY RESULT IN LOSSES IF YOUR PARTICIPATION VIOLATES CERTAIN PROTOCOL RULES, THAT  BLOCKCHAIN-BASED TRANSACTIONS ARE IRREVERSIBLE, THAT YOUR PRIVATE KEY AND BACKUP SEED PHRASE MUST BE KEPT SECRET AT ALL TIMES, THAT CONSENSYS WILL NOT STORE A BACKUP OF, NOR WILL BE ABLE TO DISCOVER OR RECOVER, YOUR PRIVATE KEY OR BACKUP SEED PHRASE, AND THAT YOU ARE SOLELY RESPONSIBLE FOR ANY APPROVALS OR PERMISSIONS YOU PROVIDE BY CRYPTOGRAPHICALLY SIGNING BLOCKCHAIN MESSAGES OR TRANSACTIONS.\n\nYOU FURTHER UNDERSTAND AND ACCEPT THAT DIGITAL TOKENS PRESENT MARKET VOLATILITY RISK, TECHNICAL SOFTWARE RISKS, REGULATORY RISKS, AND CYBERSECURITY RISKS.  YOU UNDERSTAND THAT THE COST AND SPEED OF A BLOCKCHAIN-BASED SYSTEM IS VARIABLE, THAT COST MAY INCREASE DRAMATICALLY AT ANY TIME, AND THAT COST AND SPEED IS NOT WITHIN THE CAPABILITY OF CONSENSYS TO CONTROL.  YOU UNDERSTAND THAT PROTOCOL UPGRADES MAY INADVERTENTLY CONTAIN BUGS OR SECURITY VULNERABILITIES THAT MAY RESULT IN LOSS OF FUNCTIONALITY AND ULTIMATELY FUNDS.\n\nYOU UNDERSTAND AND ACCEPT THAT CONSENSYS DOES NOT CONTROL ANY BLOCKCHAIN PROTOCOL, NOR DOES CONSENSYS CONTROL ANY SMART CONTRACT THAT IS NOT OTHERWISE OFFERED BY CONSENSYS AS PART OF THE OFFERINGS.  YOU UNDERSTAND AND ACCEPT THAT CONSENSYS DOES NOT CONTROL AND IS NOT RESPONSIBLE FOR THE TRANSITION OF ANY BLOCKCHAIN PROTOCOL FROM PROOF OF WORK TO PROOF OF STAKE CONSENSUS.  YOU AGREE THAT YOU ALONE, AND NOT CONSENSYS, IS RESPONSIBLE FOR ANY TRANSACTIONS THAT YOU ENGAGE IN WITH REGARD TO SUPPORTING ANY BLOCKCHAIN PROTOCOL WHETHER THROUGH TRANSACTION VALIDATION OR OTHERWISE, OR ANY TRANSACTIONS THAT YOU ENGAGE IN WITHANY THIRD-PARTY-DEVELOPED SMART CONTRACT OR TOKEN, INCLUDING TOKENS THAT WERE CREATED BY A THIRD PARTY FOR THE PURPOSE OF FRAUDULENTLY MISREPRESENTING AFFILIATION WITH ANY BLOCKCHAIN PROJECT.  YOU AGREE THAT CONSENSYS IS NOT RESPONSIBLE FOR THE REGULATORY STATUS OR TREATMENT OF ANY DIGITAL ASSETS THAT YOU MAY ACCESS OR TRANSACT WITH USING CONSENSYS OFFERINGS.  YOU EXPRESSLY ASSUME FULL RESPONSIBILITY FOR ALL OF THE RISKS OF ACCESSING AND USING THE OFFERINGS TO INTERACT WITH BLOCKCHAIN PROTOCOLS.",
+    "section_10": "10. Limitations of Liability.",
+    "section_10_1": "10.1 Limitation of Liability. WITH THE EXCEPTION OF CLAIMS RELATING TO A BREACH OF OUR PROPRIETARY RIGHTS AS GOVERNED BY SECTION 7 AND INTELLECTUAL PROPERTY CLAIMS AS GOVERNED BY SECTION 8, IN NO EVENT SHALL THE AGGREGATE LIABILITY OF EACH PARTY TOGETHER WITH ALL OF ITS AFFILIATES ARISING OUT OF OR RELATED TO THIS AGREEMENT EXCEED THE TOTAL AMOUNT PAID BY YOU HEREUNDER FOR THE OFFERINGS GIVING RISE TO THE LIABILITY IN THE TWELVE MONTHS PRECEDING THE FIRST INCIDENT OUT OF WHICH THE LIABILITY AROSE, OR, IF NO FEES HAVE BEEN PAID, $25,000. THE FOREGOING LIMITATION WILL APPLY WHETHER AN ACTION IS IN CONTRACT OR TORT AND REGARDLESS OF THE THEORY OF LIABILITY, BUT WILL NOT LIMIT YOUR PAYMENT OBLIGATIONS UNDER SECTION 4.",
+    "section_10_2": "10.2 Exclusion of Consequential and Related Damages. IN NO EVENT WILL EITHER PARTY OR ITS AFFILIATES HAVE ANY LIABILITY ARISING OUT OF OR RELATED TO THIS AGREEMENT FOR ANY LOST PROFITS, REVENUES, GOODWILL, OR INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, COVER, BUSINESS INTERRUPTION OR PUNITIVE DAMAGES, WHETHER AN ACTION IS IN CONTRACT OR TORT AND REGARDLESS OF THE THEORY OF LIABILITY, EVEN IF A PARTY OR ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES OR IF A PARTY’S OR ITS AFFILIATES’ REMEDY OTHERWISE FAILS OF ITS ESSENTIAL PURPOSE. THE FOREGOING DISCLAIMER WILL NOT APPLY TO THE EXTENT PROHIBITED BY LAW.",
+    "section_11": "11. Binding Arbitration and Class Action Waiver.",
+    "section_11_intro": "PLEASE READ THIS SECTION CAREFULLY – IT MAY SIGNIFICANTLY AFFECT YOUR LEGAL RIGHTS, INCLUDING YOUR RIGHT TO FILE A LAWSUIT IN COURT.",
+    "section_11_1": "11.1 Binding Arbitration. Any dispute, claim or controversy (“Claim”) relating in any way to this Agreement, the Site, or your use of the Offerings will be resolved by binding arbitration as provided in this Section 11, rather than in court, except that you may assert claims in small claims court if your claims qualify.",
+    "section_11_1_1": "11.1.1 If you are located in the United States: This agreement and any dispute or claim (including non-contractual disputes or claims) arising out of or in connection with it or its subject matter or formation shall be governed by and construed in accordance with the laws of the State of New York. The Federal Arbitration Act and federal arbitration law apply to this Agreement. There is no judge or jury in arbitration, and court review of an arbitration award is limited. However, an arbitrator can award on an individual basis the same damages and relief as a court (including injunctive and declaratory relief or statutory damages), and must follow the terms of this Agreement as a court would. The arbitration will be conducted in accordance with the expedited procedures set forth in the JAMS Comprehensive Arbitration Rules and Procedures (the “Rules”) as those Rules exist on the effective date of this Agreement, including Rules 16.1 and 16.2 of those Rules. The arbitrator’s decision shall be final, binding, and non-appealable. Judgment upon the award may be entered and enforced in any court having jurisdiction. Neither party shall sue the other party other than as provided herein or for enforcement of this clause or of the arbitrator’s award; any such suit may be brought only in a Federal District Court or a New York state court located in New York County, New York. The arbitrator, and not any federal, state, or local court, shall have exclusive authority to resolve any dispute relating to the interpretation, applicability, unconscionability, arbitrability, enforceability, or formation of this Agreement including any claim that all or any part of the Agreement is void or voidable.  If for any reason a claim proceeds in court rather than in arbitration we and you waive any right to a jury trial. Notwithstanding the foregoing we and you both agree that you or we may bring suit in court to enjoin infringement or other misuse of intellectual property rights.",
+    "section_11_1_2": "11.1.2 If you are located in the United Kingdom: This agreement and any dispute or claim (including non-contractual disputes or claims) arising out of or in connection with it or its subject matter or formation shall be governed by and construed in accordance with the law of England and Wales. Any dispute, claim or controversy relating in any way to this Agreement, the Offerings, your use of the Offerings, or to any products or services licensed or distributed by us will be resolved by binding arbitration as provided in this clause. Prior to commencing any formal arbitration proceedings, parties shall first seek settlement of any claim by mediation in accordance with the LCIA Mediation Rules, which Rules are deemed to be incorporated by reference into this clause. If the dispute is not settled by mediation within 14 days of the commencement of the mediation, or such further period as the parties shall agree in writing, the dispute shall be referred to and finally resolved by arbitration under the LCIA Rules, which are deemed to be incorporated by reference into this clause. The language to be used in the mediation and in the arbitration shall be English. The seat or legal place of arbitration shall be London.",
+    "section_11_1_3": "11.1.3 If you are located in any territory that is not specifically enumerated in Sections 11.1.1 or 11.1.2, you may elect for either of Section 11.1.1 or 11.1.2 to apply to you, otherwise this Agreement and any Claim (including non-contractual disputes or claims) arising out of or in connection with it or its subject matter or formation shall be governed by and construed in accordance with the law of Ireland. Any Claim relating in any way to this Agreement, the Offerings, your use of the Offerings, or to any products or services licensed or distributed by us will be resolved by binding arbitration as provided in this clause. Prior to commencing any formal arbitration proceedings, parties shall first seek settlement of any claim by mediation in accordance with the LCIA Mediation Rules, which Rules are deemed to be incorporated by reference into this clause. If the dispute is not settled by mediation within 14 days of the commencement of the mediation, or such further period as the parties shall agree in writing, the Claim shall be referred to and finally resolved by arbitration under the LCIA Rules, which are deemed to be incorporated by reference into this clause. The language to be used in the mediation and in the arbitration shall be English. The seat or legal place of arbitration shall be Dublin, Ireland.",
+    "section_11_2": "11.2 Class Action Waiver. YOU AND WE AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY ON AN INDIVIDUAL BASIS, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING. YOU AND WE EXPRESSLY WAIVE ANY RIGHT TO FILE A CLASS ACTION OR SEEK RELIEF ON A CLASS BASIS. Unless both you and we agree, no arbitrator or judge may consolidate more than one person’s claims or otherwise preside over any form of a representative or class proceeding. The arbitrator may award injunctive relief only in favor of the individual party seeking relief and only to the extent necessary to provide relief warranted by that party’s individual claim. If a court decides that applicable law precludes enforcement of any of this paragraph’s limitations as to a particular claim for relief, then that claim (and only that claim) must be severed from the arbitration and may be brought in court. If any court or arbitrator determines that the class action waiver set forth in this paragraph is void or unenforceable for any reason or that an arbitration can proceed on a class basis, then the arbitration provision set forth above shall be deemed null and void in its entirety and the parties shall be deemed to have not agreed to arbitrate disputes.",
+    "section_11_3": "11.3 30-Day Right to Opt Out. You have the right to opt-out and not be bound by the arbitration and class action waiver provisions set forth above by sending written notice of your decision to opt-out to the email address notices@consensys.net with subject line LEGAL OPT OUT. The notice must be sent within 30 days of your first use of the Offerings, otherwise you shall be bound to arbitrate disputes and will be deemed to have agreed to waive any right to pursue a class action in accordance with the terms of those paragraphs. If you opt-out of these provisions, we will also not be bound by them.",
+    "section_12": "12. Miscellaneous.",
+    "section_12_1": "12.1 Assignment. You will not assign or otherwise transfer this Agreement or any of your rights and obligations under this Agreement, without our prior written consent. Any assignment or transfer in violation of this Section 12.1 will be void. We may assign this Agreement without your consent (a) in connection with a merger, acquisition or sale of all or substantially all of our assets, or (b) to any Affiliate or as part of a corporate reorganization; and effective upon such assignment, the assignee is deemed substituted for us as a party to this Agreement and we are fully released from all of our obligations and duties to perform under this Agreement. Subject to the foregoing, this Agreement will be binding upon, and inure to the benefit of the parties and their respective permitted successors and assigns.",
+    "section_12_2": "12.2 DAOs. As a blockchain native company, we may interact with and provide certain Offerings to DAOs. Due to the unique nature of DAOs, to the extent the DAO votes in favor of and/or accepts such Offerings from ConsenSys, the DAO has acknowledged and agreed to these Terms in their entirety.",
+    "section_12_2_2": "12.2 Entire Agreement and Modifications. This Agreement incorporates the Policies by reference and is the entire agreement between you and us regarding the subject matter of this Agreement. If the terms of this document are inconsistent with the terms contained in any Policy, the terms contained in this document will control. Any modification to the terms of this Agreement may only be made in writing.",
+    "section_12_3": "12.3 Force Majeure. Neither party nor their respective affiliates will be liable for any delay or failure to perform any obligation under this Agreement where the delay or failure results from any cause beyond such party’s reasonable control, including but not limited to acts of God, utilities or other telecommunications failures, cyber attacks, earthquake, storms or other elements of nature, pandemics, blockages, embargoes, riots, acts or orders of government, acts of terrorism, or war.",
+    "section_12_4": "12.4 Export and Sanctions Compliance. In connection with this Agreement, you will comply with all applicable import, re-import, sanctions, anti-boycott, export, and re-export control laws and regulations, including all such laws and regulations that may apply. For clarity, you are solely responsible for compliance related to the manner in which you choose to use the Offerings. You may not use any Offering if you are the subject of U.S. sanctions or of sanctions consistent with U.S. law imposed by the governments of the country where you are using the Offering.",
+    "section_12_5": "12.5 Independent Contractors; Non-Exclusive Rights. We and you are independent contractors, and this Agreement will not be construed to create a partnership, joint venture, agency, or employment relationship. Neither party, nor any of their respective affiliates, is an agent of the other for any purpose or has the authority to bind the other. Both parties reserve the right (a) to develop or have developed for it products, services, concepts, systems, or techniques that are similar to or compete with the products, services, concepts, systems, or techniques developed or contemplated by the other party, and (b) to assist third party developers or systems integrators who may offer products or services which compete with the other party’s products or services.",
+    "section_12_6": "12.6 Eligibility. If you are under the age of majority in your jurisdiction of residence, you may use the Site or Offerings only with the consent of or under the supervision of your parent or legal guardian.\n\nNOTICE TO PARENTS AND GUARDIANS: By granting your minor permission to access the Site or Offerings, you agree to these Terms of Use on behalf of your minor. You are responsible for exercising supervision over your minor’s online activities. If you do not agree to these Terms of Use, do not let your minor use the Site or Offerings.",
+    "section_12_7": "12.7 Language. All communications and notices made or given pursuant to this Agreement must be in the English language. If we provide a translation of the English language version of this Agreement, the English language version of the Agreement will control if there is any conflict.",
+    "section_12_8": "12.8 Notice.\n\n(a) To You. We may provide any notice to you under this Agreement using commercially reasonable means, including: (i) posting a notice on the Site; (ii) sending a message to the email address then associated with your account; or (iii) using public communication channels. Notices we provide by posting on the Site or using public communication channels will be effective upon posting, and notices we provide by email will be effective when we send the email. It is your responsibility to keep your email address current to the extent you have an account. You will be deemed to have received any email sent to the email address then associated with your account when we send the email, whether or not you actually receive the email.\n\n(b) To Us. To give us notice under this Agreement, you must contact us by email at notices@consensys.net.",
+    "section_12_9": "12.9 No Third-Party Beneficiaries. Except as otherwise set forth herein, this Agreement does not create any third-party beneficiary rights in any individual or entity that is not a party to this Agreement.",
+    "section_12_10": "12.10 No Waivers. The failure by us to enforce any provision of this Agreement will not constitute a present or future waiver of such provision nor limit our right to enforce such provision at a later time. All waivers by us must be in writing to be effective.",
+    "section_12_11": "12.11 Severability. If any portion of this Agreement is held to be invalid or unenforceable, the remaining portions of this Agreement will remain in full force and effect. Any invalid or unenforceable portions will be interpreted to effect and intent of the original portion. If such construction is not possible, the invalid or unenforceable portion will be severed from this Agreement but the rest of the Agreement will remain in full force and effect.",
+    "section_12_12": "12.12 Notice and Procedure for Making Claims of Copyright Infringement. If you are a copyright owner or agent of the owner, and you believe that your copyright or the copyright of a person on whose behalf you are authorized to act has been infringed, please provide us a written notice at the address below with the following information:\n\n1. an electronic or physical signature of the person authorized to act on behalf of the owner of the copyright or other intellectual property interest;\n\n2. a description of the copyrighted work or other intellectual property that you claim has been infringed;\n\n3. a description of where the material that you claim is infringing is located with respect to the Offerings;\n\n4. your address, telephone number, and email address;\n\n5. a statement by you that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law;\n\n6. a statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright or intellectual property owner or authorized to act on the copyright or intellectual property owner’s behalf.\n\nYou can reach us at:\n\nEmail: notices@consensys.net\n\nSubject Line: Copyright Notification Mail\n\nAttention: Copyright ℅\n\nConsenSys Software Inc.\n\n49 Bogart Street Suite 22 Brooklyn, NY 11206",
+    "section_13": "13. Definitions.",
+    "section_13_body": "“Acceptable Use Policy” means the policy set forth below, as it may be updated by us from time to time. You agree not to, and not to allow third parties to, use the Offerings:\n\n1. to violate, or encourage the violation of, the legal rights of others (for example, this may include allowing End Users to infringe or misappropriate the intellectual property rights of others in violation of the Digital Millennium Copyright Act);\n\n2. to engage in, promote or encourage any illegal or infringing content;\n\n3. for any unlawful, invasive, infringing, defamatory or fraudulent purpose (for example, this may include phishing, creating a pyramid scheme or mirroring a website);\n\n4. to intentionally distribute viruses, worms, Trojan horses, corrupted files, hoaxes, or other items of a destructive or deceptive nature;\n\n5. to interfere with the use of the Offerings, or the equipment used to provide the Offerings, by customers, authorized resellers, or other authorized users;\n\n6. to disable, interfere with or circumvent any aspect of the Offerings (for example, any thresholds or limits);\n\n7. to generate, distribute, publish or facilitate unsolicited mass email, promotions, advertising or other solicitation; or\n\n8. to use the Offerings, or any interfaces provided with the Offerings, to access any other product or service in a manner that violates the terms of service of such other product or service.\n\n“API” means an application program interface.\n\n“API Requests” has the meaning set forth in Section 5.3.\n\n“Applicable Threshold” has the meaning set forth in Section 4.2.\n\n“Base Fees” has the meaning set forth in Section 4.2.\n\n“Content” means any data, text, audio, video or images, software (including machine images), and any documentation.\n\n“DAO” means Decentralized Autonomous Organization.\n\n“End User” means any individual or entity that directly or indirectly through another user: (a) accesses or uses Your Content; or (b) otherwise accesses or uses the Offerings under your account.\n\n“Fees” has the meaning set forth in Section 4.2.\n\n“Losses” means any claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys’ fees).’\n\n“Our Content” means any software (including machine images), data, text, audio, video, images, or documentation that we offer in connection with the Offerings.\n\n“Our Marks” means any trademarks, service marks, service or trade names, logos, and other designations of ConsenSys Software Inc. and their affiliates or licensors that we may make available to you in connection with this Agreement.\n\n“Order” means an order for Offerings executed through an order form directly with ConsenSys, or through a cloud vendor, such as Amazon Web Services, Microsoft Azure, or Google Cloud.\n\n“Offerings” means each of the products and services, including but not limited to Codefi, Infura, MetaMask, Quorum and any other features, tools, materials, or services offered from time to time, by us or our affiliates.\n\n“Policies” means the Acceptable Use Policy, Privacy Policy, any supplemental policies or addendums applicable to any Service as provided to you, and any other policy or terms referenced in or incorporated into this Agreement, each as may be updated by us from time to time.\n\n“Privacy Policy” means the privacy policy located at https://consensys.net/privacy-policy (and any successor or related locations designated by us), as it may be updated by us from time to time.\n\n“Service Offerings” means the Services (including associated APIs), Our Content, Our Marks, and any other product or service provided by us under this Agreement. Service Offerings do not include Third-Party Content or Third-Party Services.\n\n“Suggestions” means all suggested improvements to the Service Offerings that you provide to us.\n\n“Term” means the term of this Agreement described in Section 6.1.\n\n“Termination Date” means the effective date of termination provided in accordance with Section 6, in a notice from one party to the other.\n\n“Third-Party Content” means Content made available to you by any third party on the Site or in conjunction with the Offerings.\n\n“Your Content” means content that you or any End User transfers to us, storage or hosting by the Offerings in connection with account and any computational results that you or any End User derive from the foregoing through their use of the Offerings, excluding however any information submitted to a blockchain protocol for processing."
+  },
+  "update_needed": {
+    "title": "Updates needed",
+    "description": "We've increased security for your wallet! Please take a moment to protect yourself and update to the latest version.",
+    "primary_action": "Update to latest version",
+    "secondary_action": "Remind me later"
+  },
+  "enable_automatic_security_check_modal": {
+    "title": "Automatically check for security updates?",
+    "description": "Automatically checking for updates may expose your IP address to GitHub servers. This only indicates that your IP address is using MetaMask. No other information or account addresses are exposed.",
+    "primary_action": "Enable automatic security checks",
+    "secondary_action": "No thanks"
   }
 }
