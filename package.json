@@ -158,7 +158,7 @@
     "@metamask/ppom-validator": "0.29.0",
     "@metamask/preferences-controller": "^8.0.0",
     "@metamask/react-native-actionsheet": "2.4.2",
-    "@metamask/react-native-aes-crypto": "1.2.1",
+    "@metamask/react-native-aes-crypto": "^1.2.2",
     "@metamask/react-native-animated-fox": "^2.1.0",
     "@metamask/react-native-button": "^3.0.0",
     "@metamask/react-native-payments": "^2.0.0",
